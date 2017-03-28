@@ -8,8 +8,6 @@ module.exports = [
     },
     function (session, results) {
         session.dialogData.Qna = results.response;
-        //@todo: go to qnamaker service and ask this question
-
         console.log(results.response);
         jsonObject = JSON.stringify({"question":results.response});
 

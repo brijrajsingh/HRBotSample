@@ -1,3 +1,5 @@
+"use strict";
+
 // This loads the environment variables from the .env file
 require('dotenv-extended').load();
 
@@ -76,6 +78,7 @@ bot.dialog('/ApproveLeave', [
     },
     function (session, results, next) {
         session.send("approving leave....");
+        //@todo approve leave function
         session.endDialog(session.dialogData.leaveId);
         session.beginDialog('GetPendingApprovals');
     }
